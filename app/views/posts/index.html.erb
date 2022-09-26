@@ -19,7 +19,7 @@
         <td>
           <button class="btn btn-success"><%= link_to 'Show', post %></button>
           <button class="btn btn-warning"><%= link_to 'Edit', edit_post_path(post) %></button>
-          <button class="btn btn-danger"><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+          <button class="btn btn-danger"><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
         </td>
       </tr>
     <% end %>

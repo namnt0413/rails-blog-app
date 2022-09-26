@@ -36,6 +36,11 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '= 1.4.1', require: false
 
+# Use paperclip to upload image on rails
+gem 'paperclip', git: 'https://github.com/sd/paperclip', branch: 'remove-mimemagic'
+
+gem "nokogiri", ">= 1.6.7.rc"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
