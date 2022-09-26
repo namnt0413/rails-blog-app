@@ -1,0 +1,56 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#notice{
+    color: green;
+  }
+
+
+table {
+  border: 1px solid #333;
+
+  thead {
+    background: #333;
+    color: #fff;
+    tr{
+      th {
+        border-right: 1px solid #fff;
+      }
+     }
+  }
+
+  tbody {
+
+    tr {
+      border: 1px solid #333;
+      td {
+        border: 1px solid #333;
+      }
+
+      .btn-success{
+        margin: 0 5px !important;
+        a {
+          color: #fff !important;
+          text-decoration: none;
+        }
+      }
+      .btn-warning{
+        margin: 0 5px !important;
+        a {
+          color: #fff !important;
+          text-decoration: none;
+        }
+      }
+      .btn-danger{
+        margin: 0 5px !important;
+        a {
+          color: #fff !important;
+          text-decoration: none;
+        }
+      }
+      
+    }
+  }
+
+}
