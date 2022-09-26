@@ -5,11 +5,13 @@
 <div class="row">
   <% @posts.each do |post| %>
     <div class="col-sm-4" >
-      <%= image_tag(post.image) %>
-      <h3><%= post.title%></h3> 
-      <p><%= truncate(post.content, length: 150)%></p> 
-      <%# truncate : dua str ve do dai mong muon %>
-      <%= link_to 'Read more', post_path(post) %>
+      <a href="http://localhost:3000/posts/<%= post.id%>">
+        <%= image_tag(post.image) %>
+        <h3><%= post.title%></h3> 
+        <p><%= truncate(post.content, length: 150)%></p> 
+        <%# truncate : dua str ve do dai mong muon %>
+        <%= link_to 'Read more', post_path(post), class: 'read-more'%>
+      </a>
     </div>
   <% end %>
 </div>
