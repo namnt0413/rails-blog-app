@@ -10,9 +10,9 @@ class PostsTest < ApplicationSystemTestCase
     assert_selector "h1", text: "Posts"
   end
 
-  test "creating a Post" do
+  test "should create post" do
     visit posts_url
-    click_on "New Post"
+    click_on "New post"
 
     fill_in "Content", with: @post.content
     fill_in "Title", with: @post.title
@@ -22,9 +22,9 @@ class PostsTest < ApplicationSystemTestCase
     click_on "Back"
   end
 
-  test "updating a Post" do
-    visit posts_url
-    click_on "Edit", match: :first
+  test "should update Post" do
+    visit post_url(@post)
+    click_on "Edit this post", match: :first
 
     fill_in "Content", with: @post.content
     fill_in "Title", with: @post.title
@@ -34,11 +34,9 @@ class PostsTest < ApplicationSystemTestCase
     click_on "Back"
   end
 
-  test "destroying a Post" do
-    visit posts_url
-    page.accept_confirm do
-      click_on "Destroy", match: :first
-    end
+  test "should destroy Post" do
+    visit post_url(@post)
+    click_on "Destroy this post", match: :first
 
     assert_text "Post was successfully destroyed"
   end
